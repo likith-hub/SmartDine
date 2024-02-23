@@ -1,0 +1,82 @@
+#HomeFloatRight {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    animation: rotate360 5s linear infinite;
+    border-radius: 400px;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    display: flex;
+    margin-top: 40px;
+    background-color: #ff1717;
+    border-radius: 40px;
+    width: 90vw;
+    margin-left: auto;
+}
+
+.container > p {
+    margin: 22px;
+    margin-top: 100px;
+    padding: 5px;
+    font-weight: bolder;
+    color: #f4f1de;
+    font-size: larger;
+}
+
+.link-container {
+    display: flex;
+    width: 48vw;
+    margin: auto;
+}
+
+.link-container > a {
+    width: 10vw;
+    text-decoration: none;
+    text-align: center;
+    padding: 4px;
+    font-size: large;
+    font-weight: bold;
+    color: #d00000;
+}
+
+.grid-container {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 80vw;
+    margin: auto;
+}
+
+.grid-container > img {
+    width: 220px;
+    height: 220px;
+    margin: 3px;
+    border-radius: 7px;
+}
+
+.footer-container {
+    width: 85vw;
+    margin: auto;
+    display: flex;
+    background-color: #161a1d;
+    padding: 30px;
+    height: 300px;
+    text-align: center;
+    gap: 170px;
+    border-radius: 40px;
+}
+
+.grid-container > img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
