@@ -23,20 +23,19 @@
             background-image: url("./Pictures/DesktopBack.jpg");
             background-size: cover;
             background-repeat: no-repeat;
-            filter: brightness(0.5); /* Adjust the brightness to reduce visibility */
-            z-index: -1; /* Ensure the image stays behind other content */
+            filter: brightness(0.5);
+            z-index: -1;
         }
         .content {
             position: relative;
-            z-index: 1; /* Ensure the content stays above the background image */
-            color: white; /* Example of content styling */
+            z-index: 1;
+            color: white;
             padding: 20px;
         }
         .dropdown-menu button {
             margin: 5px;
             padding: 5px 10px;
         }
-        /* Style adjustments for buttons */
         .btn-secondary.text-link {
             color: white;
         }
@@ -44,18 +43,17 @@
             margin-right: 5px;
         }
         .btn-secondary.text-link strong {
-            display: none; /* Hide text on small screens */
+            display: none;
         }
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .content {
-                padding: 10px; /* Adjust padding for smaller screens */
+                padding: 10px;
             }
             .background-image {
-                background-size: contain; /* Ensure background image fits smaller screens */
+                background-size: contain;
             }
             .btn-secondary.text-link strong {
-                display: inline-block; /* Show text on small screens */
+                display: inline-block;
             }
         }
     </style>
