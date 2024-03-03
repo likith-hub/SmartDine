@@ -13,6 +13,7 @@
             padding: 0;
             height: 100%;
             position: relative;
+            overflow-x: hidden;
         }
         .background-image {
             position: absolute;
@@ -56,6 +57,33 @@
                 display: inline-block;
             }
         }
+        #show-directory {
+            position: sticky;
+            top: 20px;
+        }
+        .recommendation-container > h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bolder;
+        }
+        .recommendation-images > img {
+            height: 200px;
+            width: 200px;
+            margin: 12px;
+        }
+        .recommendation-images {
+            white-space: nowrap;
+            animation: slide 20s linear infinite;
+        }
+        @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+        }
+        .recommendation-container {
+            width: 67vw;
+            margin: auto;
+            padding: 12px;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -83,10 +111,30 @@
                         <button type="button" class="btn btn-primary">Confirm</button>
                     </li>
                 </ul>
-
-                <h1>Whats wrong</h1>
             </div>
         </div>
+        <br>
+        <br>
+        <div class="container recommendation-container">
+            <h3 style="text-align: center;" class="h3 text-dark">Our Special Items &#128523</h1>
+            <br>
+            <div class="container recommendation-images">
+                <img src="./Pictures/RecommendationPictures/1.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/2.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/3.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/4.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/5.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/6.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/7.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/8.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/9.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/10.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/11.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/12.jpg" alt="">
+            </div>
+        </div>
+        <br><br>
+        
     </div>
 </body>
 </html>
