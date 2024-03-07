@@ -8,6 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        body {
+            background-color: black;
+        }
         body, html {
             margin: 0;
             padding: 0;
@@ -31,7 +34,6 @@
             position: relative;
             z-index: 1;
             color: white;
-            padding: 20px;
         }
         .dropdown-menu button {
             margin: 5px;
@@ -92,17 +94,53 @@
             margin: auto;
             justify-content: space-between;
         }
-
+        .feedback-container {
+            background-color: #343a40;
+            color: white;
+            width: 100vw;
+            margin: 0%;
+            padding: 4%;
+        }
+        .recommendation-container, .feedback-container, .help-container {
+            display: block;
+        }
+        .list-group-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .list-group-item {
+            margin: 1%;
+        }
+        .help-container > .col {
+            margin: 2%;
+        }
+        .help-container {
+            background-color: #343a40;
+            display: flex;
+        }
+        .help-container > div {
+            margin: 1%;
+        }
+        #show-directory {
+            z-index: 3;
+        }
+        .icons {
+            display: flex;
+        }
+        .icons > div {
+            margin: 1%;
+        }
     </style>
 </head>
 <body>
     <div class="background-image"></div>
-    <div class="content">
-        <div id="show-directory" class="btn-group gap-3 d-flex justify-content-end">
-            <a href="#" class="btn btn-outline-warning text-link rounded"><strong>Home</strong></a>
+    <div class="content" id="content">
+        <div id="show-directory" class="btn-group gap-3 d-flex justify-content-end" style="margin: 12px;">
+            <a href="#content" class="btn btn-outline-warning text-link rounded"><strong>Home</strong></a>
             <a href="#" class="btn btn-outline-warning text-link rounded"><strong>Menu</strong></a>
-            <a href="#" class="btn btn-outline-warning text-link rounded"><strong>Feedback</strong></a>
-            <a href="#" class="btn btn-outline-warning text-link rounded"><strong>Help</strong></a>
+            <a href="#feedback-container" class="btn btn-outline-warning text-link rounded"><strong>Feedback</strong></a>
+            <a href="#help-container" class="btn btn-outline-warning text-link rounded"><strong>Help</strong></a>
             <a href="view-cart" class="btn btn-secondary text-link rounded" style="display: flex; justify-content: center; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart" style="margin-right: 5px;"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg><strong>Cart</strong></a>
             <div class="dropdown">
                 <button id="profile-toggle" class="btn btn-secondary text-link rounded dropdown-toggle" type="button" id="identityDropdown" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><strong>Identity</strong></button>
@@ -122,8 +160,7 @@
                 </ul>
             </div>
         </div>
-        <br>
-        <br>
+        <br><br><br>
         <div class="container recommendation-container">
             <h3 style="text-align: center;" class="h3 text-dark">Our Special Items &#128523</h1>
             <br>
@@ -141,20 +178,57 @@
                 <img src="./Pictures/RecommendationPictures/11.jpg" alt="">
                 <img src="./Pictures/RecommendationPictures/12.jpg" alt="">
             </div>
-        </div>
-        <br><br>
-        <div class="menu">
-            <div class="Menubar">
-                <h4 class="h4" style="justify-content: left;display: flex;color: orange;font-weight: bolder;font-size: xx-large;">Our Menu</h4>
-                <input type="search" id="order-search" class="form-control bg-light" placeholder="Search" style="width: fit-content;place-content: right;">
+            <br>
+            <div class="container recommendation-images">
+                <img src="./Pictures/RecommendationPictures/1.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/2.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/3.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/4.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/5.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/6.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/7.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/8.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/9.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/10.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/11.jpg" alt="">
+                <img src="./Pictures/RecommendationPictures/12.jpg" alt="">
             </div>
-            <div class="pagination m-5 gap-5" style="display: flex; place-content: center;">
-                <div class="page-item"><a href="" class="page-link rounded bg-secondary text-dark">STARTERS</a></div>
-                <div class="page-item"><a href="" class="page-link rounded bg-secondary text-dark">BIRYANI</a></div>
-                <div class="page-item"><a href="" class="page-link rounded bg-secondary text-dark">CURRIES</a></div>
-                <div class="page-item"><a href="" class="page-link rounded bg-secondary text-dark">OTHERS</a></div>
+        </div>
+        <br>
+        <div class="feedback-container" id="feedback-container" style="width: 98vw;margin: auto;border-radius: 20px;">
+            <h4 style="text-align: center;">Give Us Your Feedback</h4>
+            <br>
+            <p style="text-align: center;">What do you think of this online menu system ?</p>
+            <div class="list-group-container">
+                <div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-angry"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><path d="M7.5 8 10 9"/><path d="m14 9 2.5-1"/><path d="M9 10h0"/><path d="M15 10h0"/></svg></div>
+                <div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-frown"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg></div>
+                <div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-meh"><circle cx="12" cy="12" r="10"/><line x1="8" x2="16" y1="15" y2="15"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg></div>
+                <div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smile"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg></div>
+                <div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-laugh"><circle cx="12" cy="12" r="10"/><path d="M18 13a6 6 0 0 1-6 5 6 6 0 0 1-6-5h12Z"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg></div>
             </div>
         </div>
+        <br>
+        <div class="help-container" id="help-container" style="width: 98vw;margin: auto;border-radius: 20px;">
+            <div class="col1" style="width: 33%;">
+                <h3>SmartDine!</h3>
+                <p>Where ordering and paying for your favourite meals are just a click away!</p>
+            </div>
+            <div class="col2" style="width: 33%;">
+                <p>Describe your problem here. Our team is ready to solve your issue round the clock</p>
+                <textarea name="" id="textarea" cols="30" rows="10" placeholder="Describe your issue" style="padding: 15px;"></textarea>
+            </div>
+            <div class="col3" style="width: 33%;">
+                <br><br><br>
+                <p style="text-align: center;">Contact Us</p>
+                <div class="icons" style="align-items: center;justify-content: center;">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div>
+                </div>
+            </div>
+        </div>
+        <br>
     </div>
 </body>
 </html>
