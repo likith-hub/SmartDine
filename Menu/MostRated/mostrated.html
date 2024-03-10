@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartDine - Menu</title>
+    <link rel="icon" type="image/png" href="../../Pictures/Favicon-Photoroom.png-Photoroom.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0; 
+            overflow: hidden;
+        }
+        .content {
+            display: flex;
+            height: 100vh;
+        }
+        .left-content {
+            width: 20%;
+            background-color: white;
+        }
+        .middle-content {
+            flex: 1;
+            outline: 2px solid yellow;
+        }
+        .right-content {
+            width: 25%;
+            background-color: white;
+            outline: 2px solid yellow;
+        }
+        .left-top-content-heading h1 {
+            color: red;
+            text-align: center;
+        }
+        .left-top-content-buttons > div button {
+            width: 90%;
+            justify-content: center;
+            padding: 18px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            position: relative;
+            left: 5%;
+            border-radius: 10px;
+            border: 0px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--This is for Content-->
+    <div class="content">
+
+        <!--This is for left Content-->
+        <div class="left-content">
+            <!--This is for left-top-content-->
+            <div class="left-top-content">
+                <div class="left-top-content-heading"><h1>SmartDine!</h1></div>
+                <br>
+                <div class="left-top-content-buttons">
+                    <div><button>ALL</button></div>
+                    <div><button>MOSTLY ORDERED</button></div>
+                    <div><button>NEW ITEMS</button></div>
+                    <div><button  style="background-color: #fca311;">MOST RATED</button></div>
+                </div>
+            </div>
+            <!--This is for left-bottom-content-->
+            <div class="left-bottom-content">
+
+            </div>
+        </div>
+        
+        <!--This is for Middle Content-->
+        <div class="middle-content">
+            <!--This is for middle top content-->
+            <div class="middle-top-content">
+
+            </div>
+            <!--This is for middle-bottom-content-->
+            <div class="middle-bottom-content">
+
+            </div>
+        </div>
+
+        <!--This is for right content-->
+        <div class="right-content">
+            <!--This is for right-top-content-->
+            <div class="right-top-content">
+
+            </div>
+            <!--This is for right-bottom-content-->
+            <div class="right-bottom-content">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
