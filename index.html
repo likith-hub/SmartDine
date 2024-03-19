@@ -139,7 +139,7 @@
     <div class="content" id="content">
         <div id="show-directory" class="btn-group gap-3 d-flex justify-content-end" style="margin: 12px;">
             <a href="#content" class="btn btn-outline-warning text-link rounded"><strong>Home</strong></a>
-            <a href="./Menu/menu.html" class="btn btn-outline-warning text-link rounded"><strong>Menu</strong></a>
+            <a href="./Menu/MenuAll/menuall.html" class="btn btn-outline-warning text-link rounded"><strong>Menu</strong></a>
             <a href="#feedback-container" class="btn btn-outline-warning text-link rounded"><strong>Feedback</strong></a>
             <a href="#help-container" class="btn btn-outline-warning text-link rounded"><strong>Help</strong></a>
             <a href="view-cart" class="btn btn-secondary text-link rounded" style="display: flex; justify-content: center; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart" style="margin-right: 5px;"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg><strong>Cart</strong></a>
@@ -147,16 +147,13 @@
                 <button id="profile-toggle" class="btn btn-secondary text-link rounded dropdown-toggle" type="button" id="identityDropdown" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><strong>Identity</strong></button>
                 <ul class="dropdown-menu" aria-labelledby="identityDropdown">
                     <li>
-                        <input class="form-control" type="text" placeholder="Name">
+                        <input id="name" class="form-control" type="text" placeholder="Name" required>
                     </li>
                     <li>
-                        <input class="form-control" type="text" placeholder="Table Number">
+                        <input id="phone-number" class="form-control" type="text" placeholder="Phone Number" required>
                     </li>
-                    <li>
-                        <input class="form-control" type="text" placeholder="Phone Number">
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                    <li style="align-items: center; justify-content: center; position: relative; left: 12px;">
+                        <input id="confirm-button" type="submit" value="Confirm" style="border-radius: 4px; background-color: rgba(12, 111, 12, 0.847); font-size: larger; font-weight: bold;">
                     </li>
                 </ul>
             </div>

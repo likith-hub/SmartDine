@@ -21,12 +21,12 @@
         }
         .middle-content {
             flex: 1;
-            outline: 2px solid yellow;
+            outline: 1px solid black;
         }
         .right-content {
             width: 25%;
             background-color: white;
-            outline: 2px solid yellow;
+            outline: 1px solid black;
         }
         .left-top-content-heading h1 {
             color: red;
@@ -44,6 +44,51 @@
             border: 0px;
             background-color: white;
         }
+        #middle-top-left-content-homeButton {
+            background-color: white;
+            border: 0px solid white;
+            padding: 16px;
+            font-size: 14px;
+            border: #fca311;
+            outline: 1px solid #fca311;
+            background-color: transparent;
+            margin: 12px;
+        }
+        #middle-top-left-content-homeButton:hover {
+            cursor: pointer;
+            background-color: #fca311;
+            color: white;
+        }
+        .middle-top-content {
+            background-color: white;
+            height: 11%;
+        }
+        .middle-top-left-content {
+            width: 60%;
+        }
+        .middle-top-right-content {
+            width: 30%;
+        }
+        .middle-top-left-content, .middle-top-right-content {
+            display: inline-block;
+        }
+        #middle-top-right-content-searchBar {
+            padding: 14px;
+            border-radius: 40px;
+            border: 1px solid black;
+            border: 2px solid #fca311;
+            width: 100%;
+            margin: auto;
+        }
+        #middle-top-left-content-homeDiv button {
+            background-color: #fca311;
+            color: white;
+            border-radius: 12px;
+        }
+        .middle-bottom-content {
+            height: 89%;
+        }
+
     </style>
 </head>
 <body>
@@ -57,10 +102,10 @@
                 <div class="left-top-content-heading"><h1>SmartDine!</h1></div>
                 <br>
                 <div class="left-top-content-buttons">
-                    <div><button>ALL</button></div>
-                    <div><button>MOSTLY ORDERED</button></div>
-                    <div><button   style="background-color: #fca311;">NEW ITEMS</button></div>
-                    <div><button>MOST RATED</button></div>
+                    <div><button onclick="window.location.href = '../MenuAll/menuall.html'" style="cursor: pointer;">ALL</button></div>
+                    <div><button onclick="window.location.href = '../MenuMostlyOrdered/menumostlyordered.html'" style="cursor: pointer;">MOSTLY ORDERED</button></div>
+                    <div><button onclick="window.location.href = '../NewItems/newitems.html'" style="background-color: #fca311;cursor: pointer;">NEW ITEMS</button></div>
+                    <div><button onclick="window.location.href = '../MostRated/mostrated.html'" style="cursor: pointer;">MOST RATED</button></div>
                 </div>
             </div>
             <!--This is for left-bottom-content-->
@@ -73,11 +118,16 @@
         <div class="middle-content">
             <!--This is for middle top content-->
             <div class="middle-top-content">
-
+                <div class="middle-top-left-content">
+                    <div id="middle-top-left-content-homeDiv" onclick="window.location.href = '../../index.html'"><button id="middle-top-left-content-homeButton">HOME</button></div>
+                </div>
+                <div class="middle-top-right-content">
+                    <input id="middle-top-right-content-searchBar" type="search" placeholder="Search Items">
+                </div>
             </div>
             <!--This is for middle-bottom-content-->
             <div class="middle-bottom-content">
-
+                <h1></h1>
             </div>
         </div>
 
