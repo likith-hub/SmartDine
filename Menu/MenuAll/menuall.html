@@ -114,6 +114,18 @@
             transform: scale(1.1);
         }
 
+        #middle-top-left-content-homeDiv button {
+            animation: homebuttonanimation infinite ease-in-out 4s;
+        }
+
+        @keyframes homebuttonanimation {
+            0%, 100% {
+                color: white;
+            }
+            50% {
+                color: green;
+            }
+        }
     </style>
 </head>
 <body>
@@ -127,7 +139,7 @@
                 <div class="left-top-content-heading"><h1>SmartDine!</h1></div>
                 <br>
                 <div class="left-top-content-buttons">
-                    <div><button onclick="window.location.href = '../MenuAll/menuall.html'"  style="background-color: #fca311;cursor: pointer;">ALL</button></div>
+                    <div><button onclick="window.location.href = '../MenuAll/menuall.html'"  style="background-color: #fca311;cursor: pointer;box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);">ALL</button></div>
                     <div><button onclick="window.location.href = '../MenuMostlyOrdered/menumostlyordered.html'" style="cursor: pointer;">MOSTLY ORDERED</button></div>
                     <div><button onclick="window.location.href = '../NewItems/newitems.html'" style="cursor: pointer;">NEW ITEMS</button></div>
                     <div><button onclick="window.location.href = '../MostRated/mostrated.html'" style="cursor: pointer;">MOST RATED</button></div>
@@ -154,7 +166,7 @@
             <div class="middle-bottom-content">
                 <h2 style="margin: 4%;">Starters</h2>
                 <div class="grid-container">
-                    <div class="grid-item" data-info="Chicken-65 200"><img src="./MenuAllPictures/StartersPictures/Chicken 65.jpeg" alt="" style="width: 90%;height: 58%;"><p>Chicken-65</p><p>Rs. 200</p></div>
+                    <div class="grid-item" id="Chicken-65" data-info="Chicken-65"><img src="./MenuAllPictures/StartersPictures/Chicken 65.jpeg" alt="" style="width: 90%;height: 58%;"><p>Chicken-65</p><p>Rs. 200</p></div>
                     <div class="grid-item"><img src="./MenuAllPictures/StartersPictures/ChickenLollipop.jpeg" alt="" style="width: 90%;height: 58%;"><p>Chicken Lollipop</p><p>Rs. 70</p></div>
                     <div class="grid-item"><img src="./MenuAllPictures/StartersPictures/ChilliPaneer.jpeg" alt="" style="width: 90%;height: 58%;"><p>Chilli Paneer</p><p>Rs. 90</p></div>
                     <div class="grid-item"><img src="./MenuAllPictures/StartersPictures/DosaBites.jpeg" alt="" style="width: 90%;height: 58%;"><p>Dosa Bites</p><p>Rs. 60</p></div>
@@ -234,24 +246,13 @@
 
 
     <script>
-        var div = document.getElementsByClassName('grid-item');
-        var info = div.getAttribute('data-info');
-        alert(info);
+        var item = document.getElementById("Chicken-65");
 
+        item.addEventListener("click",addToPlate);
 
-        function searchText() {
-            var searchInput = document.getElementById('middle-top-right-content-searchBar').value.toLowerCase();
-            var pageText = document.body.innerText.toLowerCase();
-            var index = pageText.indexOf(searchInput);
-
-            if (index !== -1) {
-            window.scrollTo(0, document.body.innerHTML.substring(0, index).split('\n').length * 20);
-            }
+        function addToPlate() {
+            console.log("demo");
         }
-
-        document.getElementById('middle-top-right-content-searchBar').addEventListener('input', function() {
-            searchText();
-        });
     </script>
 </body>
 </html>
