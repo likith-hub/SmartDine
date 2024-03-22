@@ -238,6 +238,20 @@
         var info = div.getAttribute('data-info');
         alert(info);
 
+
+        function searchText() {
+            var searchInput = document.getElementById('middle-top-right-content-searchBar').value.toLowerCase();
+            var pageText = document.body.innerText.toLowerCase();
+            var index = pageText.indexOf(searchInput);
+
+            if (index !== -1) {
+            window.scrollTo(0, document.body.innerHTML.substring(0, index).split('\n').length * 20);
+            }
+        }
+
+        document.getElementById('middle-top-right-content-searchBar').addEventListener('input', function() {
+            searchText();
+        });
     </script>
 </body>
 </html>
